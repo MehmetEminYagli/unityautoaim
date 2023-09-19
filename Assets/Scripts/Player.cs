@@ -7,14 +7,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float MoveSpeed = 1f;
-    [SerializeField] private float JumpForce = 2f;
-
+    [SerializeField] private Vector3 pozisyon;
 
     [SerializeField] private GameObject Bulletprefab;
     [SerializeField] private Transform gunBulletPozition;
     [SerializeField] private float bulletSpeed = 1f;
     [SerializeField] private float BulletLife = 1f;
-    [SerializeField] private Vector3 pozisyon;
+    public float atisArasiSuresi = 1.5f;
+    private float sonAtisZamani;
     void Start()
     {
         
@@ -48,16 +48,23 @@ public class Player : MonoBehaviour
             }
         }
 
+        
+
         if (dusmanvar)
         {
-            GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-
-            if (enemy != null)
+            GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
+            if (Enemy != null)
             {
-                Vector3 enemypozition = enemy.transform.position;
-                transform.LookAt(enemypozition);
-            }
+                Vector3 EnemyPozition = Enemy.transform.position;
+                transform.LookAt(EnemyPozition);
 
+                if (Time.time>= sonAtisZamani + atisArasiSuresi)
+                {
+                    FireBullet();
+
+                    sonAtisZamani = Time.time;
+                }
+            }
         }
         else
         {

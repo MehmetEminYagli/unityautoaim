@@ -430,14 +430,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101529423}
-  m_LocalRotation: {x: 0.000000007848445, y: 0.8899102, z: -0.45613575, w: 0.000000015312134}
+  m_LocalRotation: {x: -0.000000007848445, y: 0.8899102, z: -0.45613575, w: -0.000000015312134}
   m_LocalPosition: {x: -4.0007224, y: 12.92, z: 7.62743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1821524710}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 47.413, y: -0.25, z: 0}
 --- !u!1 &317319230
 GameObject:
@@ -757,13 +758,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.000000007848445, y: 0.8899102, z: -0.45613575, w: 0.000000015312134}
-  m_LocalPosition: {x: -4.0007224, y: 12.92, z: 7.62743}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 101529425}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -0.47, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -1529,7 +1530,7 @@ Transform:
   - {fileID: 63654225}
   - {fileID: 1824787467}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821524709
 GameObject:
@@ -1969,7 +1970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074613581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.434, y: 0, z: -0}
+  m_LocalPosition: {x: -0.434, y: 0, z: -0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2100,12 +2101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  JumpForce: 2
+  pozisyon: {x: 0, y: 0, z: 0}
   Bulletprefab: {fileID: 6470412257637163533, guid: a95a5337aea376d4a9d5a3686e227f63, type: 3}
   gunBulletPozition: {fileID: 2074613582}
   bulletSpeed: 25
-  BulletLife: 3
-  pozisyon: {x: 0, y: 0, z: 0}
+  BulletLife: 2
+  atisArasiSuresi: 1
 --- !u!135 &2132285881
 SphereCollider:
   m_ObjectHideFlags: 0
